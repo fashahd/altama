@@ -49,10 +49,30 @@ body, .adv-img p, .caption-bottom p, .adv-circle .caption p, .advs-box p, .list-
 .front{
     margin : 50px 50px 100px 50px;
 }
+.front p{
+	font-weight : 400;
+}
 
 .title-front{
     color: #174894;
     font-weight: 600;
+}
+
+.title-read{
+    color: #174894;
+    font-weight: 600;
+	font-size: 9pt;
+}
+
+.text-normal{
+	padding-top: 10px;
+	color: #f3b007;
+}
+
+.title-front .underline{
+	padding-bottom: 6px;
+	border-bottom: 3px solid #174894;
+	line-height: 48px;
 }
 
     #preloader:after {
@@ -559,6 +579,7 @@ VARIOUS
 .text-s {
     font-size: 13px !important;
     line-height: 18px;
+	font-weight: 600
 }
 
 .text-m {
@@ -890,7 +911,7 @@ header.hamburger-header {
 
 .navbar-brand img {
     transition: all .3s;
-    max-height: 140%;
+    max-height: 160%;
 }
 
 .navbar-brand.scroll-show.showed {
@@ -2633,6 +2654,10 @@ footer .social-group {
 
 .footer-center {
     text-align: center;
+}
+
+.footer-center h5{
+	text-transform : uppercase;
 }
 
 footer .content {

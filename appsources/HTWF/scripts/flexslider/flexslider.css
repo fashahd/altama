@@ -286,7 +286,7 @@ body .flex-direction-nav a.flex-next:before {
     }
 
 .flex-control-paging li a {
-    width: 11px;
+    width: 80px;
     height: 11px !important;
     display: block;
     background: rgba(181, 181, 181, 0.9);

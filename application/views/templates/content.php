@@ -5,7 +5,7 @@
         <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
             <div class="navbar navbar-main">
                 <div class="container">
-                    <div class="navbar-header">
+                    <div class="navbar-header" style="margin-right:50px;margin-top:-15px">
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
@@ -16,6 +16,9 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
+                            <li>
+                                <a><span class="fa fa-home" style="color:#F3B007;margin-top:3px"></span></a>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Profile <span class="caret"></span></a>
                                 <ul class="dropdown-menu multi-level">
@@ -56,43 +59,24 @@
             </div>
         </div>
     </header>
-    <div class="section-bg-color">
-        <div class="container content">
-            <hr class="space m" />
-            <div class="row">
-                <div class="col-md-7 col-sm-12">
-                    <h2 class="text-normal">Our buildings company serve<br />several needs of society</h2>
-                    <p class="text-color text-normal text-m no-margins">Primarily as shelter from weather, security, living space.</p>
-                    <hr class="space s" />
-                    <hr />
-                    <hr class="space s" />
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h4 class="text-normal">Weather for the infrastructures</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consece partisio.
-                            </p>
+    <div class="section-empty no-paddings">
+        <div class="section-slider row-18 white">
+            <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
+                <ul class="slides">
+                    <li data-slider-anima="fade-left" data-time="1000">
+                        <div class="section-slide">
+                            <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/banner.jpeg')">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <h4 class="text-normal">Living space and outdoor gardens</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consecteto.
-                            </p>
+                    </li>
+                    <li data-slider-anima="fade-left" data-time="1000">
+                        <div class="section-slide">
+                            <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/banner.jpeg')">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <h4 class="text-normal">Home and building security and hacking</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetu
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 hidden-sm visible-xs pull-right" data-anima="fade-right">
-                    <hr class="space m visible-sm" />
-                    <img src="<?=base_url()?>appsources/images/mk-5.png" alt="" />
-                </div>
+                    </li>
+                </ul>
             </div>
-            <hr class="space m" />
         </div>
     </div>
     <div class="section-empty">
@@ -108,10 +92,10 @@
         <div class="front">
             <div class="content">
                 <div class="col-md-4">
-                    <h4 class="title-front"><u>Bu</u>siness Overview</h4>
+                    <h4 class="title-front"><span class="underline">Bu</span>siness Overview</h4>
                 </div>
                 <div class="col-md-8">
-                    <p>PT. Altama Surya Anugerah</p>
+                    <p>PT. Altama Surya Anugerah memfokuskan untuk terjun di dunia alat - alat serta perkakas konstruksi seperti Handtools, Powertools dan Lubricant.</p>
                 </div>
             </div>
         </div>
@@ -137,138 +121,51 @@
             </div>
         </div>
     </div>
-    <div class="section-empty no-paddings-y">
+    <div class="section-empty">
         <div class="container content">
-            <hr class="space">
             <div class="row ">
-                <div class="col-md-5 col-sm-6" data-anima="fade-left">
-                    <img src="<?=base_url()?>appsources/images/avatar-4.png" alt="">
+                <div class="col-lg-3">
+                    <h4 class="title-front">Video Profile</h4>
+					<a class="img-box" href="#">
+						<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+					</a>
                 </div>
-                <div class="col-md-7 col-sm-6">
-                    <hr class="space m" />
-                    <div class="title-base text-left">
-                        <hr />
-                        <h2>Premium support</h2>
-                        <p>We're always online</p>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
-                        Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi utstrud exercitation ulluer magna, nulla dolores nemo culpa, congueamco aeiciendis eget consectetuer martello pnrtorio vascello aliquip ex ea commodo.
-                    </p>
-                    <hr class="space s">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="3000">3.000</label></b>
-                                    <p>Active costumers</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="3560">900</label></b>
-                                    <p>Employees</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="109">80</label></b>
-                                    <p>World locations</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="520">600</label></b>
-                                    <p>Porjects completed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="space s" />
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="300000">300.000</label></b>
-                                    <p>Dollars invested</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="5000">5000</label></b>
-                                    <p>Coffee</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="230">230</label></b>
-                                    <p>Partners</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="icon-box icon-box-top-bottom counter-box-icon text-left">
-                                <div class="icon-box-cell">
-                                </div>
-                                <div class="icon-box-cell">
-                                    <b><label class="counter text-l" data-speed="5000" data-to="365">365</label></b>
-                                    <p>Active days per year</p>
-                                </div>
-                            </div>
-                            <hr class="space visible-sm" />
-                        </div>
-                    </div>
+                <div class="col-lg-9">
+					<div class="col-lg-12">
+					<h4 class="title-front">Berita Terkini</h4>
+					</div>
+					<div class="col-lg-4">
+						<hr class="space visible-sm" />
+						<a class="img-box" href="#">
+							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+						</a>
+						<h4 class="text-normal">Official research team</h4>
+						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
+						<hr class="space s" />
+						<h4 class="title-read">Read More ....</h4>
+					</div>
+					<div class="col-lg-4">
+						<hr class="space visible-sm" />
+						<a class="img-box" href="#">
+							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+						</a>
+						<h4 class="text-normal">Official research team</h4>
+						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
+						<hr class="space s" />
+						<h4 class="title-read">Read More ....</h4>
+					</div>
+					<div class="col-lg-4">
+						<hr class="space visible-sm" />
+						<a class="img-box" href="#">
+							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+						</a>
+						<h4 class="text-normal">Official research team</h4>
+						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
+						<hr class="space s" />
+						<h4 class="title-read">Read More ....</h4>
+					</div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-bg-color bg-color white">
-        <div class="container content">
-            <div class="row vertical-row">
-                <div class="col-md-6">
-                    <form action="http://www.framework-y.com/scripts/php/contact-form.php" class="form-box form-ajax form-inline white" method="post" data-email="federico@pixor.it">
-                        <input id="email" name="email" placeholder="Type your email..." type="email" class="form-control form-value" required="">
-                        <hr class="space m">
-                        <button class="btn btn-sm" type="submit">Join now</button>
-                        <div class="success-box">
-                            <div class="alert alert-success">Congratulations. Your message has been sent successfully</div>
-                        </div>
-                        <div class="error-box">
-                            <div class="alert alert-warning">Error, please retry. Your message has not been sent</div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-s">
-                        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod iaculis eu
-                        lacus nunc mi elitvehicula ut laoreet acaliquam.
-                    </p>
-                </div>
-            </div>
+			</div>
         </div>
     </div>
     <i class="scroll-top scroll-top-mobile show fa fa-sort-asc"></i>
@@ -277,63 +174,30 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 footer-center text-left">
-                        <img width="120" src="<?=base_url()?>appsources/images/logo.png" alt="" />
-                        <hr class="space m" />
-                        <p class="text-s">Collins Street West 8007, San Fransico, United States.</p>
-                        <div class="tag-row text-s">
-                            <span>support@company.com</span>
-                            <span>+02 3205550678</span>
-                        </div>
-                        <hr class="space m" />
-                        <div class="btn-group social-group btn-group-icons">
-                            <a target="_blank" href="#" data-social="share-facebook">
-                                <i class="fa fa-facebook text-xs circle"></i>
-                            </a>
-                            <a target="_blank" href="#" data-social="share-twitter">
-                                <i class="fa fa-twitter text-xs circle"></i>
-                            </a>
-                            <a target="_blank" href="#" data-social="share-google">
-                                <i class="fa fa-google-plus text-xs circle"></i>
-                            </a>
-                            <a target="_blank" href="#" data-social="share-linkedin">
-                                <i class="fa fa-linkedin text-xs circle"></i>
-                            </a>
-                        </div>
+                        <img width="200" src="<?=base_url()?>appsources/logo_altama.png" alt="" />
+						<h5><b>PT. Altama Surya Anugerah</b></h5>
+                        <p class="text-s">Jl. Bandengan Utara<br> No.85A, RT.3/RW.16,<br> Penjaringan, North Jakarta City<br> Jakarta 14440 Indonesia</p>
+                        <p class="text-s">Telp :  (021) 6680180</p>
+						<p><a>Open in Google Maps</a></p>
                     </div>
                     <div class="col-md-4 footer-left text-left">
                         <div class="row">
                             <div class="col-md-6 text-s">
-                                <h3>Menu</h3>
-                                <a href="#">Home</a><br />
-                                <a href="#">Contacts</a><br />
-                                <a href="#">Future projects</a><br />
-                                <a href="#">Locations</a><br />
-                                <a href="#">Latest news</a><br />
+                                <h3></h3>
+                                <a href="#" class="text-s">Contactus</a><br />
+                                <a href="#" class="text-s">Career</a><br />
+                                <a href="#" class="text-s">News & Event</a><br />
+                                <a href="#" class="text-s">Service Center</a><br />
 
                             </div>
                             <div class="col-md-6 text-s">
-                                <h3>Pages</h3>
-                                <a href="#">Support</a><br />
-                                <a href="#">Terms of services</a><br />
-                                <a href="#">RSS Feeds</a><br />
-                                <a href="#">Partnerships</a><br />
-                                <a href="#">Latest news</a><br />
+                                <h3></h3>
+                                <a href="#" class="text-s">Tekiro</a><br />
+                                <a href="#" class="text-s">RYU</a><br />
+                                <a href="#" class="text-s">REXCO</a><br />
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 footer-left text-left">
-                        <h3>You can trust us</h3>
-                        <p class="text-s">
-                            Utenim ad minim veniam quis nostrud exercitation ullamco lorem ipsum dolor sit ametullamco lorem ipsum dolor sit ametullamco lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmo.
-                        </p>
-                        <hr class="space xs" />
-                        <img src="<?=base_url()?>appsources/images/cards-icon.png" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div class="row copy-row">
-                <div class="col-md-12 copy-text">
-                    © 2018 Yellow Business - Multipurpose & Construction Template Handmade by <a href="http://schiocco.io/">schiocco.io</a>
                 </div>
             </div>
         </div>
