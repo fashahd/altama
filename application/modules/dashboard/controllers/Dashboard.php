@@ -20,6 +20,7 @@ class Dashboard extends MX_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data["module"] = "Dashboard";
+		$this->layout->content("index",$data);
 	}
 }
