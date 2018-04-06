@@ -38,6 +38,13 @@
                     <link rel="stylesheet" href="'.base_url().'appsources/HTWF/scripts/social.stream.css">
                     <link rel="stylesheet" href="'.base_url().'appsources/skin.css">
                     <link rel="icon" href="'.base_url().'appsources/favicon.png">
+                    <style type="text/css">
+                    @font-face{
+                        font-family: "Myriad-Pro";  
+                        src: url('.base_url().'appsources/myriadpro/MyriadPro-Regular.otf) format("truetype");
+                    }
+                    body{ font-family:Myriad-Pro; }
+                    </style>
                 </head>
             ';
 
