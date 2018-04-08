@@ -189,12 +189,12 @@ header .input-group-btn .btn {
 }
 
 .input-group-btn .btn, .btn.btn-primary:hover {
-    background-color: #9c9c9c !important;
-    border-color: #9c9c9c !important;
+    background-color: #fff !important;
+    border-color: #7a7a7a !important;
 }
 
     .input-group-btn .btn:hover, .btn.btn-primary {
-        background-color: #7a7a7a !important;
+        background-color: #fff !important;
         border-color: #7a7a7a !important;
     }
 

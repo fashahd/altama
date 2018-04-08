@@ -3607,7 +3607,7 @@ GOOGLE MAP
 */
 .google-map {
     background: rgba(0,0,0,0.1);
-    height: 350px;
+    height: 450px;
 }
 
 /*
@@ -5858,7 +5858,7 @@ dl dd {
 }
 
 .list-blog input, .list-blog select {
-    background: #f7f7f7;
+    background: #fff;
     border-radius: 3px;
     padding: 5px;
 }
