@@ -166,6 +166,9 @@
 						<label>Your Message</label>
 						<textarea class="form-control"></textarea>
 					</div>
+					<div class="form-group">
+						<button class="btn btn-indigo">Send</button>
+					</div>
                 </div>
 			</div>
         </div>

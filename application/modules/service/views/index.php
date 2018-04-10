@@ -21,7 +21,7 @@
                 <div class="col-md-12 hc_separator_cnt"><hr class="default"/></div>
             </div>
             <div class="col-lg-8 widget no-paddings">				
-                <div class="google-map" data-coords="28.6139391,77.20902120000005"></div>
+                <div class="google-map" id="map"></div>
 			</div>
             <div class="col-lg-4">
                 <div class="input-group search-blog list-blog">
@@ -79,3 +79,20 @@
 		</div>
     </div>
 </div>
+
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8ZhCy850j37UFvNd5XUTAQ8VLzg55Qtc&callback=initMap">
+    </script>
