@@ -70,10 +70,11 @@ Penghargaan itu merupakan bukti nyata atas kepercayaan konsumen yang telah mengg
 													<span><i class="fa fa-calendar"></i><a> 15 Aug 2017</a></span>
 												</div>
 												<h3>
-													Disukai Konsumen, Tekiro Rebut Top Brand 4 Tahun Berturut-turut
+													Tips Merawat Kunci Sock
 												</h3>
-												<p style="text-align:left">JAKARTA - Tekiro tools kembali mendapatkan Top Brand Award untuk kategori Handtools di tahun 2017. Penghargaan ini menjadi penghargaan keempat yang di terima Tekiro secara berturut-turut sejak 2014 lalu.
-Penghargaan itu merupakan bukti nyata atas kepercayaan konsumen yang telah menggunakan produk Tekiro selama bertahun-tahun. Tekiro merupakan perusahaan yang sudah 20 tahun melayani kebutuhan masyarakat terhadap peralatan pendukung keperluannya sehari-hari, termasuk di dalamnya kebutuhan di industri automotif.</p>
+												<p style="text-align:left">
+													Pengendara.com - Perkakas tersebut rusak, karatan bahkan hilang, sudah pasti akan merepotkan dan membuat kesal kita sebagai pemiliknya. Pengendara.com memberikan referensi tips merawat kunci yang dipersembahkan Tekiro. Berikut tipsnya.
+												</p>
 												<h3><a>Read More ...</a></h3>
 											</div>
 										</div>
@@ -132,10 +133,11 @@ Penghargaan itu merupakan bukti nyata atas kepercayaan konsumen yang telah mengg
 													<span><i class="fa fa-calendar"></i><a> 15 Aug 2017</a></span>
 												</div>
 												<h3>
-													Disukai Konsumen, Tekiro Rebut Top Brand 4 Tahun Berturut-turut
+													Tips Merawat Kunci Sock
 												</h3>
-												<p style="text-align:left">JAKARTA - Tekiro tools kembali mendapatkan Top Brand Award untuk kategori Handtools di tahun 2017. Penghargaan ini menjadi penghargaan keempat yang di terima Tekiro secara berturut-turut sejak 2014 lalu.
-Penghargaan itu merupakan bukti nyata atas kepercayaan konsumen yang telah menggunakan produk Tekiro selama bertahun-tahun. Tekiro merupakan perusahaan yang sudah 20 tahun melayani kebutuhan masyarakat terhadap peralatan pendukung keperluannya sehari-hari, termasuk di dalamnya kebutuhan di industri automotif.</p>
+												<p style="text-align:left">
+													Pengendara.com—Perkakas tersebut rusak, karatan bahkan hilang, sudah pasti akan merepotkan dan membuat kesal kita sebagai pemiliknya. Pengendara.com memberikan referensi tips merawat kunci yang dipersembahkan Tekiro. Berikut tipsnya.
+												</p>
 												<h3><a>Read More ...</a></h3>
 											</div>
 										</div>
@@ -147,7 +149,13 @@ Penghargaan itu merupakan bukti nyata atas kepercayaan konsumen yang telah mengg
                 </div>
 				<div class="pagination-inner list-nav">
 					<ul class="pagination-lg hide-first-last pagination-grid pagination" data-page-items="6" data-options="scrollTop:true,prev:<i class='fa fa-angle-left'></i> Prev,next:Next<i class='fa fa-angle-right'></i>">
-					<li class="first disabled"><a href="#"><i class="fa fa-angle-double-left"></i> <span>First</span></a></li><li class="prev disabled"><a href="#"><i class="fa fa-angle-left"></i> Prev</a></li><li class="page active"><a href="#">1</a></li><li class="page"><a href="#">2</a></li><li class="next"><a href="#">Next<i class="fa fa-angle-right"></i></a></li><li class="last"><a href="#"><span>Last</span> <i class="fa fa-angle-double-right"></i></a></li></ul>
+						<li class="first disabled"><a href="#"><i class="fa fa-angle-double-left"></i> <span>First</span></a></li>
+						<li class="prev disabled"><a href="#"><i class="fa fa-angle-left"></i> Prev</a></li>
+						<li class="page active"><a href="#">1</a></li>
+						<li class="page"><a href="#">2</a></li>
+						<li class="next"><a href="#">Next<i class="fa fa-angle-right"></i></a></li>
+						<li class="last"><a href="#"><span>Last</span> <i class="fa fa-angle-double-right"></i></a></li>
+					</ul>
 				</div>
             </div>
         </div>

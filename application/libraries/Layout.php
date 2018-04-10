@@ -37,6 +37,9 @@
                     <link rel="stylesheet" href="'.base_url().'appsources/HTWF/scripts/php/contact-form.css">
                     <link rel="stylesheet" href="'.base_url().'appsources/HTWF/scripts/social.stream.css">
                     <link rel="stylesheet" href="'.base_url().'appsources/skin.css">
+
+					<link rel="stylesheet" type="text/css" href="'.base_url().'appsources/HTWF/slick/slick.css">
+					<link rel="stylesheet" type="text/css" href="'.base_url().'appsources/HTWF/slick/slick-theme.css"/>
                     <link rel="icon" href="'.base_url().'appsources/favicon.png">
                     <style type="text/css">
                     @font-face{
@@ -67,6 +70,8 @@
             <script src="'.base_url().'appsources/HTWF/scripts/social.stream.min.js"></script>
             <script src="'.base_url().'appsources/HTWF/scripts/jquery.slimscroll.min.js"></script>
             <script src="'.base_url().'appsources/HTWF/scripts/smooth.scroll.min.js"></script>
+			<script src="'.base_url().'appsources/HTWF/slick/slick.min.js"></script>
+            <script src="'.base_url().'appsources/HTWF/scripts/custom.js"></script>
             ';
             return $ret;
         }

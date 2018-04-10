@@ -72,7 +72,7 @@ COLORS
 
 .footer-minimal .footer-title, .advs-box-top-icon.boxed .btn, .advs-box-top-icon.boxed .circle-button, .sidebar-nav ul a:hover, header .mi-menu .sidebar-nav ul a:hover,
 .woocommerce div.product p.price, .woocommerce div.product span.price, .white .text-color, .accordion-list .list-group-item > a:hover, .boxed .circle-button:hover i,
-.boxed .btn:hover i, .pagination > .active > a, .pagination > li:not(.disabled):hover > a, .boxed .circle-button, header .btn-search:hover, .advs-box h2 a:hover, .nav.ms-minimal > li.active > a {
+.boxed .btn:hover i, .boxed .circle-button, header .btn-search:hover, .advs-box h2 a:hover, .nav.ms-minimal > li.active > a {
     color: #000 !important;
 }
 
@@ -100,7 +100,7 @@ COLORS
 }
 
 .boxed.advs-box-multiple .advs-box-content, .niche-box-post, .extra-content, .quote-author, .border-color, .border-color.boxed-border.boxed-border.white, .img-border, .timeline > li > .timeline-badge,
-body div.boxed-border.border-yellow, .pagination li.active a {
+body div.boxed-border.border-yellow{
     border-color: #ffcc00 !important;
 }
 
@@ -126,7 +126,7 @@ body div.boxed-border.border-yellow, .pagination li.active a {
 }
 
 .white.btn, .white .btn, .white .tag-row a, .header-bootstrap i.icon, .white .tag-row i, .white .advs-box-content h2 a, .white.advs-box-side-img h2 a, .advs-box-side-icon.boxed .icon-box i,
-.circle-button, .white .pagination > li.disabled > a, .white .pagination > li > a, .social-colors i, .btn.circle-button, .btn, .btn i, .circle-button, .btn.circle-button, .btn:hover,
+.circle-button, .social-colors i, .btn.circle-button, .btn, .btn i, .circle-button, .btn.circle-button, .btn:hover,
 .btn:hover i, .btn.focus, .input-group button {
     color: #fff;
 }
@@ -1896,4 +1896,12 @@ RESPONSIVE
     .header-base .breadcrumb, .header-bootstrap .breadcrumb {
         text-align: left;
     }
+}
+.pagination li.active a {
+	background :#164892;
+	color:#fff;
+	border : none;
+}
+.pagination li.active a:hover {
+	color:#000;
 }
