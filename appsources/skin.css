@@ -61,7 +61,7 @@ COLORS
     .niche-box-testimonails h5, .title-icon i, i, .fullpage-menu.white li.active a i, .timeline > li > .timeline-label h4, .anima-button i, .pricing-table .list-group-item.pricing-price,
     .footer-center .footer-title, .accordion-list .list-group-item > a.active, .btn-border, .btn.btn-border, .btn.circle-button.btn-border, footer a:hover, .block-quote.quote-1:before,
     .block-quote.quote-2:before, .breadcrumb > li + li:before, .adv-img-full-content p.sub {
-        color: #ffcc00;
+        color: #000;
     }
 
 @media (max-width: 994px) {
@@ -73,7 +73,7 @@ COLORS
 .footer-minimal .footer-title, .advs-box-top-icon.boxed .btn, .advs-box-top-icon.boxed .circle-button, .sidebar-nav ul a:hover, header .mi-menu .sidebar-nav ul a:hover,
 .woocommerce div.product p.price, .woocommerce div.product span.price, .white .text-color, .accordion-list .list-group-item > a:hover, .boxed .circle-button:hover i,
 .boxed .btn:hover i, .pagination > .active > a, .pagination > li:not(.disabled):hover > a, .boxed .circle-button, header .btn-search:hover, .advs-box h2 a:hover, .nav.ms-minimal > li.active > a {
-    color: #ffcc00 !important;
+    color: #000 !important;
 }
 
 .btn-border:hover, .btn.btn-border:hover, .btn.circle-button.btn-border:hover, .tag-row i {
@@ -864,34 +864,28 @@ COMPONENTS
 .accordion-list .list-group-item > a {
     font-weight: 400;
     padding-left: 20px;
+	background : #ffcc00;
+	color : #fff;
 }
 
-    .accordion-list .list-group-item > a:before, .advs-box .btn-text:after, .box-steps .step-item:after {
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
-        margin-left: -21px;
-        top: 19px;
-        position: absolute;
-        border-top-width: 2px;
-        border-top-style: solid;
-        border-right-width: 2px;
-        border-right-style: solid;
-        content: "";
-        width: 6px;
-        height: 6px;
-        transition: all .15s;
-        border-color: rgba(93, 93, 93, 0.5);
-    }
+.accordion-list .list-group-item > a:before, .advs-box .btn-text:after, .box-steps .step-item:after {
+	/* top: 19px; */
+	position: absolute;
+	content: "\f0fe";
+	padding-left: 90%;
+	font-family: FontAwesome;
+	width: 6px;
+	height: 6px;
+	transition: all .15s;
+	border-color: rgba(93, 93, 93, 0.5);
+}
 
 .accordion-list .list-group-item > .panel > .inner {
     padding: 0px 15px 10px 20px;
 }
 
 .accordion-list .list-group-item > a.active:before {
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
+    content: "\f146";
 }
 
 .btn-lg, .btn-group-lg > .btn {

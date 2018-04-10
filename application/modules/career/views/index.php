@@ -113,16 +113,58 @@
     <div class="section-empty">
         <div class="container content">
             <div class="row ">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="list-group accordion-list">
-						<div class="list-group-item">
-							<a href="#" style="background:#6A4D8F"> Accordion item 1</a>
+						<div class="list-group-item career">
+							<a href="#"> Accordion item 1</a>
 							<div class="panel">
 								<div class="inner">
 									...
 								</div>
 							</div>
 						</div>
+						<div class="list-group-item career">
+							<a href="#"> Accordion item 1</a>
+							<div class="panel">
+								<div class="inner">
+									...
+								</div>
+							</div>
+						</div>
+						<div class="list-group-item career">
+							<a href="#"> Accordion item 1</a>
+							<div class="panel">
+								<div class="inner">
+									...
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+						<label>Name *</label>
+						<input class="form-control" />
+					</div>
+                    <div class="form-group">
+						<label>Phone</label>
+						<input class="form-control" />
+					</div>
+                    <div class="form-group">
+						<label>Email</label>
+						<input class="form-control" />
+					</div>
+                    <div class="form-group">
+						<label>Position</label>
+						<input class="form-control" />
+					</div>
+                    <div class="form-group">
+						<label>Attach Your CV</label>
+						<input type="file"/>
+					</div>
+                    <div class="form-group">
+						<label>Your Message</label>
+						<textarea class="form-control"></textarea>
 					</div>
                 </div>
 			</div>
