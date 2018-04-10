@@ -1,4 +1,3 @@
-
     <div class="section-empty no-paddings row-25">
         <div class="section-slider row-25 white">
             <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
