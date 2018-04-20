@@ -1,19 +1,25 @@
+<?php
+    $sql    = "SELECT * FROM banner";
+    $query  = $this->db->query($sql);
+    $dataimage = "";
+    if($query->num_rows()>0){
+        foreach($query->result() as $row){
+            $dataimage .= '
+                <li data-slider-anima="fade-left" data-time="1000">
+                    <div class="section-slide">
+                        <div class="bg-cover" style="background-image:url(\''.base_url().'appadmin/'.$row->image_url.'\')">
+                        </div>
+                    </div>
+                </li>
+            ';
+        }
+    }
+?>
     <div class="section-empty no-paddings row-25">
         <div class="section-slider row-25 white">
             <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
                 <ul class="slides">
-                    <li data-slider-anima="fade-left" data-time="1000">
-                        <div class="section-slide">
-                            <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/banner.jpeg')">
-                            </div>
-                        </div>
-                    </li>
-                    <li data-slider-anima="fade-left" data-time="1000">
-                        <div class="section-slide">
-                            <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/banner.jpeg')">
-                            </div>
-                        </div>
-                    </li>
+                    <?=$dataimage?>
                 </ul>
             </div>
         </div>

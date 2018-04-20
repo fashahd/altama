@@ -8,6 +8,11 @@ class Auth extends MX_Controller {
 		parent::__construct();
 		$this->load->model("ModelUsers");
 	}
+
+	function signout(){
+		$this->session->unset_userdata('username');
+		redirect("auth/login");
+	}
 	
 	public function login()
 	{
