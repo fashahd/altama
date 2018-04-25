@@ -88,16 +88,15 @@
 	width: 100%;
 }
 
+#previewing{
+	height: 100%;
+}
 
 .main {
-	position: absolute;
-	top: 50px;
-	left: 20%;
-	width: 450px;
-	height:530px;
+	position: relative;
 	border: 2px solid gray;
 	border-radius: 10px;
-	}
+}
 	.main label{
 	color: rgba(0, 0, 0, 0.71);
 	margin-left: 60px;
@@ -105,20 +104,20 @@
 	#image_preview{
 	position: absolute;
 	font-size: 30px;
-	top: 100px;
+	top: 0px;
 	left: 100px;
-	width: 250px;
+	width: 450px;
 	height: 230px;
 	text-align: center;
 	line-height: 180px;
 	font-weight: bold;
 	color: #C0C0C0;
 	background-color: #FFFFFF;
-	overflow: auto;
+	/* overflow: auto; */
 	}
 	#selectImage{
 	padding: 19px 21px 14px 15px;
-	position: absolute;
+	position: relative;
 	bottom: 0px;
 	width: 414px;
 	background-color: #FEFFED;

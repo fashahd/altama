@@ -3,7 +3,8 @@
     $query  = $this->db->query($sql);
     $milestone = "";
     if($query->num_rows()>0){
-        $milestone = $row->milestone;
+        $row = $query->row();
+        $milestone = $row->milestone_url;
     }
     $sql    = "SELECT * FROM banner";
     $query  = $this->db->query($sql);
@@ -70,15 +71,17 @@
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-12">
-                        <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                            <div id="image_preview"><img id="previewing" src="<?=base_url()?>/appadmin/<?=$milestone?>" /></div>
-                                <hr id="line">
-                                <div id="selectImage">
-                                <label>Select Your Image</label><br/>
-                                <input type="file" name="file" id="file" required />
-                                <input type="submit" value="Upload" class="submit" />
+                            <div class="main">
+                                <form id="uploadimage" method="post" enctype="multipart/form-data">
+                                    <div id="image_preview"><img id="previewing" src="<?=base_url()?><?=$milestone?>" /></div>
+                                    <hr id="line">
+                                    <div id="selectImage">
+                                        <label>Select Your Image</label><br/>
+                                        <input type="file" name="file" id="file" required />
+                                        <button type="submit" class="submit" />Update</button>
+                                    </div>
+                                </form>
                             </div>
-                        </form>
                         </div>
                     </div>
                 </div>

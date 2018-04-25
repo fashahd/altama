@@ -124,6 +124,37 @@
             }
         }
 
+        function addMilestone($image1){
+            $this->db->trans_begin();
+
+            $sql    = "SELECT * FROM company_data";
+            $query  = $this->db->query($sql);
+            if($query->num_rows()>0){
+                $row = $query->row();
+                unlink($row->milestone_url);
+                $data   = array(
+                    "milestone_url"     => $image1
+                );            
+                $query  = $this->db->update("company_data", $data);
+            }else{
+                $data   = array(
+                    "milestone_url"     => $image1
+                );            
+                $query  = $this->db->insert("company_data", $data);
+            }
+
+            if ($this->db->trans_status() === FALSE)
+            {
+                $this->db->trans_rollback();
+                return "gagal";
+            }
+            else
+            {
+                $this->db->trans_commit();
+                return "sukses";
+            }
+        }
+
         function addslider($image1){
             $this->db->trans_begin();
             $data   = array(

@@ -1,4 +1,11 @@
 <?php
+    $sql    = "SELECT * FROM company_data";
+    $query  = $this->db->query($sql);
+    $milestone = "";
+    if($query->num_rows()>0){
+        $row = $query->row();
+        $milestone = $row->milestone_url;
+    }
     $sql    = "SELECT * FROM banner";
     $query  = $this->db->query($sql);
     $dataimage = "";
@@ -72,7 +79,7 @@
                 <div class="col-lg-3">
                     <h4 class="title-front">Video Profile</h4>
 					<a class="img-box" href="#">
-						<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+						<img src="<?=base_url()?>appadmin/<?=$milestone?>" alt="">
 					</a>
                 </div>
                 <div class="col-lg-9">

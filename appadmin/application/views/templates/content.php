@@ -70,11 +70,11 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="<?=base_url()?>catalog/categories"><i class="fa fa-circle-o"></i> Company Overview</a></li>
-                                <li><a href="<?=base_url()?>catalog/subcategories"><i class="fa fa-circle-o"></i> Vision and Mission</a></li>
-                                <li><a href="<?=base_url()?>catalog/products"><i class="fa fa-circle-o"></i> Award & Recognition</a></li>
-                                <li><a href="<?=base_url()?>catalog/products"><i class="fa fa-circle-o"></i> Board of Commisioner</a></li>
-                                <li><a href="<?=base_url()?>catalog/products"><i class="fa fa-circle-o"></i> Board of Director</a></li>
+                                <li><a href="<?=base_url()?>profile/pages/company-overview-and-milestone"><i class="fa fa-circle-o"></i> Company Overview</a></li>
+                                <li><a href="<?=base_url()?>profile/pages/vision-mission-and-company-value"><i class="fa fa-circle-o"></i> Vision and Mission</a></li>
+                                <li><a href="<?=base_url()?>profile/pages/award-and-recognition"><i class="fa fa-circle-o"></i> Award & Recognition</a></li>
+                                <li><a href="<?=base_url()?>profile/pages/board-of-commisioner"><i class="fa fa-circle-o"></i> Board of Commisioner</a></li>
+                                <li><a href="<?=base_url()?>profile/pages/board-of-director"><i class="fa fa-circle-o"></i> Board of Director</a></li>
                             </ul>
                         </li>
                         <li>

@@ -20,41 +20,48 @@ class Dashboard extends MX_Controller {
 	}
 
 	function uploadmilestone(){
-		if(isset($_FILES["file"]["type"]))
-		{
+		if(isset($_FILES["file"]["name"])){
 			$validextensions = array("jpeg", "jpg", "png");
-			$temporary = explode(".", $_FILES["file"]["name"]);
+			$temporary 		= explode(".", $_FILES["file"]["name"]);
 			$file_extension = end($temporary);
-			if ((($_FILES["file"]["type"] == "image/png") || ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "image/jpeg")
-			) && ($_FILES["file"]["size"] < 100000)//Approx. 100kb files can be uploaded.
-			&& in_array($file_extension, $validextensions)) {
+			if ((($_FILES["file"]["type"] == "image/png") || ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "image/jpeg")) && ($_FILES["file"]["size"] < 200000000) && in_array($file_extension, $validextensions)) {
 				if ($_FILES["file"]["error"] > 0)
 				{
-					echo "Return Code: " . $_FILES["file"]["error"] . "<br/><br/>";
-				}
-				else
+					$message = "<span id='invalid'>***Invalid file Size or Type***<span>";
+				}else
 				{
-					if (file_exists("appsources/banner/" . $_FILES["file"]["name"])) {
-						echo $_FILES["file"]["name"] . " <span id='invalid'><b>already exists.</b></span> ";
-					}
-					else
-					{
-						$sourcePath = $_FILES['file']['tmp_name']; // Storing source path of the file in a variable
-						$targetPath = "appsources/banner/".$_FILES['file']['name']; // Target path where file is to be stored
-						move_uploaded_file($sourcePath,$targetPath) ; // Moving Uploaded file
-						echo "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
-						echo "<br/><b>File Name:</b> " . $_FILES["file"]["name"] . "<br>";
-						echo "<b>Type:</b> " . $_FILES["file"]["type"] . "<br>";
-						echo "<b>Size:</b> " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-						echo "<b>Temp file:</b> " . $_FILES["file"]["tmp_name"] . "<br>";
-					}
+					$url = base_url()."appsources/banner/";
+					$image=basename($_FILES['file']['name']);
+					$image=str_replace(' ','|',$image);
+					$type = explode(".",$image);
+					$type = $type[count($type)-1];
+					$tmppath="appsources/banner/".uniqid(rand()).".".$type; // uniqid(rand()) function generates unique random number.
+					move_uploaded_file($_FILES['file']['tmp_name'],$tmppath);
+					$message = "sukses";
+					$image1 = $tmppath;
 				}
-			}
-			else
+			}else
 			{
-			echo "<span id='invalid'>***Invalid file Size or Type***<span>";
+				$message = "<span id='invalid'>***Invalid file Size or Type***<span>";
 			}
 		}
+		if($message == "sukses"){
+			$response = $this->ModelAdmin->addMilestone($image1);
+			if($response == "sukses"){
+				$message = "<span id='success'>Image Uploaded Successfully...!!</span><br/>";
+			}else{
+				$message = "<span id='invalid'>***Invalid file Size or Type***<span>";
+			}
+		}else{
+			$response = "max_upload";
+		}
+		
+		$data = array(
+			"status" 	=> $response,
+			"message"	=> $message
+		);
+		echo json_encode($data);
+		return;
 	}
 
 	function addslider(){

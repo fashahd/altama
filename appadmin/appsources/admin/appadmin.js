@@ -1,5 +1,54 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+$("#formvisimisi").submit(function(event) {
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+    var form = $('#formvisimisi');
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/profile/updatevisimisi",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			alert(data);
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			// $("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			// +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			// +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			// +"Can't Connect, Please Try Again</div>");
+			// return;
+		}
+	});
+})
+$("#formcompany").submit(function(event) {
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+    var form = $('#formcompany');
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/profile/updatecompany",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			alert(data);
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			// $("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			// +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			// +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			// +"Can't Connect, Please Try Again</div>");
+			// return;
+		}
+	});
+})
+
 function deleteslider(image_id){
 	if (confirm('Are you sure you?')) {
 		$.ajax({
@@ -24,25 +73,36 @@ function deleteslider(image_id){
 	}
 }
 
-$("#uploadimage").on('submit',(function(e) {
-	e.preventDefault();
-	$("#message").empty();
-	$('#loading').show();
+$('#uploadimage').submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData(this);
+
 	$.ajax({
-		url: toUrl+"/appadmin/dashboard/uploadmilestone", // Url to which the request is send
-		type: "POST",             // Type of request to be send, called as method
-		data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-		contentType: false,       // The content type used when sending data to the server.
-		cache: false,             // To unable request pages to be cached
-		processData:false,        // To send DOMDocument or non processed data file it is set to false
-		success: function(data)   // A function to be called if request succeeds
-		{
-			$('#loading').hide();
-			$("#message").html(data);
+		type : 'POST',
+		url  : toUrl+"/appadmin/dashboard/uploadmilestone",
+		data: formData,
+		xhr: function() {
+			var myXhr = $.ajaxSettings.xhr();
+			if(myXhr.upload){
+				myXhr.upload.addEventListener('progress',progress, false);
+			}
+			return myXhr;
+        },
+		cache: false,
+        contentType: false,
+        processData: false,
+		dataType: "json",
+		success: function(data){
+			$("#message").html(data.message);
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			$("#message").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
 		}
 	});
-}));
-
+})
 // Function to preview image after validation
 $(function() {
 	$("#file").change(function() {
@@ -68,8 +128,7 @@ function imageIsLoaded(e) {
 	$("#file").css("color","green");
 	$('#image_preview').css("display", "block");
 	$('#previewing').attr('src', e.target.result);
-	$('#previewing').attr('width', '250px');
-	$('#previewing').attr('height', '230px');
+	$('#previewing').attr('height', '100%');
 };
 
 function deleteservice(){
