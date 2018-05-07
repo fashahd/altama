@@ -61,7 +61,7 @@ body, .adv-img p, .caption-bottom p, .adv-circle .caption p, .advs-box p, .list-
 .title-read{
     color: #174894;
     font-weight: 600;
-	font-size: 9pt;
+	font-size: 12pt;
 }
 
 .text-normal{
@@ -228,7 +228,7 @@ body .row-20 {
 }
 
 body .row-21 {
-    height: 750px !important;
+    height: 600px !important;
 }
 
 body .row-22 {
@@ -866,7 +866,6 @@ GLOBAL
 */
 
 header {
-    line-height: 1.42857143;
     z-index: 995;
 }
 
@@ -890,6 +889,7 @@ header .btn-default, header .btn, header .anima-button.circle-button, header .in
 
 .navbar-default .navbar-nav > li > a, .mega-menu h5 {
     color: #174894;
+    margin-top: 10px;
 }
 
 .nav > li.dropdown > a {
@@ -909,9 +909,21 @@ header.hamburger-header {
     width: auto;
 }
 
+.navbar-brand img{
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
 .navbar-brand img {
-    transition: all .3s;
-    max-height: 160%;
+    max-height: 80px;
+    margin-bottom: 20px;
+}
+
+.navbar-brand-shrink img {
+    max-height: 60px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .navbar-brand.scroll-show.showed {

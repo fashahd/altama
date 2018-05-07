@@ -37,6 +37,8 @@
                     <link rel="stylesheet" href="'.base_url().'appsources/HTWF/scripts/php/contact-form.css">
                     <link rel="stylesheet" href="'.base_url().'appsources/HTWF/scripts/social.stream.css">
                     <link rel="stylesheet" href="'.base_url().'appsources/skin.css">
+                    <link rel="stylesheet" type="text/css" href="'.base_url().'appsources/animateheader/css/component.css" />
+                    <script src="'.base_url().'appsources/animateheader/js/modernizr.custom.js"></script>
 
 					<link rel="stylesheet" type="text/css" href="'.base_url().'appsources/HTWF/slick/slick.css">
 					<link rel="stylesheet" type="text/css" href="'.base_url().'appsources/HTWF/slick/slick-theme.css"/>
@@ -72,6 +74,8 @@
             <script src="'.base_url().'appsources/HTWF/scripts/smooth.scroll.min.js"></script>
 			<script src="'.base_url().'appsources/HTWF/slick/slick.min.js"></script>
             <script src="'.base_url().'appsources/HTWF/scripts/custom.js"></script>
+            <script src="'.base_url().'appsources/animateheader/js/classie.js"></script>
+            <script src="'.base_url().'appsources/animateheader/js/cbpAnimatedHeader.min.js"></script>
             ';
             return $ret;
         }

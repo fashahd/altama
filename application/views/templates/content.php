@@ -9,7 +9,7 @@
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="<?=base_url()?>">
+                        <a class="navbar-brand row-4" href="<?=base_url()?>" id="#headerlogo">
                             <img class="logo-default" src="<?=base_url()?>appsources/logo_altama.png" alt="logo" />
                             <img class="logo-retina" src="<?=base_url()?>appsources/logo_altama.png" alt="logo" />
                         </a>
@@ -18,7 +18,7 @@
                         <ul class="nav navbar-nav">
                             <?=$this->menu->treemenu()?>
                         </ul>
-                        <div class="nav navbar-nav navbar-right">
+                        <div class="nav navbar-nav navbar-right" style="margin-top:10px">
                             <div class="search-box-menu">
                                 <div class="search-box scrolldown">
                                     <input type="text" class="form-control" placeholder="Search for...">
@@ -40,7 +40,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 footer-center text-left">
-                        <img width="200" src="<?=base_url()?>appsources/logo_altama.png" alt="" />
 						<h5><b>PT. Altama Surya Anugerah</b></h5>
                         <p class="text-s">Jl. Bandengan Utara<br> No.85A, RT.3/RW.16,<br> Penjaringan, North Jakarta City<br> Jakarta 14440 Indonesia</p>
                         <p class="text-s">Telp :  (021) 6680180</p>
@@ -70,3 +69,40 @@
         <?=$this->layout->headersourcejs()?>
     </footer>
 </body>
+<script>
+    $( document ).ready(function() {
+        var docElem = document.documentElement,
+            header = document.querySelector( '.navbar-brand' ),
+            didScroll = false,
+            changeHeaderOn = 300;
+
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                console.log("test");
+                classie.add( header, 'navbar-brand-shrink' );
+            }
+            else {
+                console.log("test2");
+                classie.remove( header, 'navbar-brand-shrink' );
+            }
+            didScroll = false;
+        }
+
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+
+        init();
+    });
+</script>
+

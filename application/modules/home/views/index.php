@@ -22,21 +22,12 @@
         }
     }
 ?>
-    <div class="section-empty no-paddings row-25">
+    <div class="section-empty no-paddings row-21">
         <div class="section-slider row-25 white">
             <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
                 <ul class="slides">
                     <?=$dataimage?>
                 </ul>
-            </div>
-        </div>
-    </div>
-    <div class="section-empty">
-        <div class="container content">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img src="<?=base_url()?>appsources/repo/milestone.png" alt="" />
-                </div>
             </div>
         </div>
     </div>
@@ -76,46 +67,44 @@
     <div class="section-empty">
         <div class="container content">
             <div class="row ">
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <h4 class="title-front">Video Profile</h4>
-					<a class="img-box" href="#">
-						<img src="<?=base_url()?>appadmin/<?=$milestone?>" alt="">
-					</a>
-                </div>
-                <div class="col-lg-9">
-					<div class="col-lg-12">
-					<h4 class="title-front">Berita Terkini</h4>
-					</div>
-					<div class="col-lg-4">
-						<hr class="space visible-sm" />
-						<a class="img-box" href="#">
-							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
-						</a>
-						<h4 class="text-normal">Official research team</h4>
-						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
-						<hr class="space s" />
-						<h4 class="title-read">Read More ....</h4>
-					</div>
-					<div class="col-lg-4">
-						<hr class="space visible-sm" />
-						<a class="img-box" href="#">
-							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
-						</a>
-						<h4 class="text-normal">Official research team</h4>
-						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
-						<hr class="space s" />
-						<h4 class="title-read">Read More ....</h4>
-					</div>
-					<div class="col-lg-4">
-						<hr class="space visible-sm" />
-						<a class="img-box" href="#">
-							<img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
-						</a>
-						<h4 class="text-normal">Official research team</h4>
-						Uaculis eu lacus nunc mi elit, vehicidatat atque nesciunt diula ut laoreet aue nesciunt dicta justoui variusamet justo nunc tempor, metus velocipiede marzian pertollio partiso.
-						<hr class="space s" />
-						<h4 class="title-read">Read More ....</h4>
-					</div>
+                    <video controls style="width:100%">
+                        <source src="<?=base_url()?>appsources/repo/video.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>                
+                <div class="col-lg-8">
+                    <div class="col-lg-12">
+                        <h4 class="title-front">Berita Terkini</h4>
+                    </div>  
+                    <div class="col-lg-6">
+                        <hr class="space visible-sm" />
+                        <a class="img-box" href="#">
+                            <img src="<?=base_url()?>appsources/images/gallery/image-1.jpg" alt="">
+                        </a>
+                        <h2 class="text-normal">Official research team</h2>
+                        <h6>27 April 2018</h6>
+                        <h3 class="title-read">Read More ....</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="col-lg-12">
+                            <h2 class="text-normal">Official research team</h2>
+                            <h6>27 April 2018</h6>
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <h2 class="text-normal">Official research team</h2>
+                            <h6>27 April 2018</h6>
+                            <hr>
+                        </div>
+                        <div class="col-lg-12">
+                            <h2 class="text-normal">Official research team</h2>
+                            <h6>27 April 2018</h6>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
 			</div>
         </div>
