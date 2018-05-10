@@ -1503,8 +1503,8 @@ ul li .fa-li.fa-square {
         margin-bottom: 0;
     }
 
-.niche-box-team:hover .img-box img {
-    transform: translateY(25px) scale(1.2) !important;
+.niche-box-team:active .img-box img {
+    transform: translateY(25px) scale(1) !important;
 }
 
 .porfolio-bar a {

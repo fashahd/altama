@@ -45,17 +45,26 @@
                         <p class="text-s">Telp :  (021) 6680180</p>
 						<p><a>Open in Google Maps</a></p>
                     </div>
-                    <div class="col-md-4 footer-left text-left">
+                    <div class="col-md-6 footer-left text-left">
                         <div class="row">
                             <div class="col-md-6 text-s">
                                 <h3></h3>
-                                <a href="#" class="text-s">Contactus</a><br />
-                                <a href="#" class="text-s">Career</a><br />
-                                <a href="#" class="text-s">News & Event</a><br />
-                                <a href="#" class="text-s">Service Center</a><br />
+                                <a href="<?=base_url()?>contact" class="text-s">Company Overview & Milestone</a><br />
+                                <a href="<?=base_url()?>career" class="text-s">Vision, Missions & Company Value</a><br />
+                                <a href="<?=base_url()?>news" class="text-s">Award & Recognition</a><br />
+                                <a href="<?=base_url()?>service" class="text-s">Board of Commisioner</a><br />
+                                <a href="<?=base_url()?>service" class="text-s">Board of Director</a><br />
 
                             </div>
-                            <div class="col-md-6 text-s">
+                            <div class="col-md-3 text-s">
+                                <h3></h3>
+                                <a href="<?=base_url()?>contact" class="text-s">Contactus</a><br />
+                                <a href="<?=base_url()?>career" class="text-s">Career</a><br />
+                                <a href="<?=base_url()?>news" class="text-s">News & Event</a><br />
+                                <a href="<?=base_url()?>service" class="text-s">Service Center</a><br />
+
+                            </div>
+                            <div class="col-md-3 text-s">
                                 <h3></h3>
                                 <a href="#" class="text-s">Tekiro</a><br />
                                 <a href="#" class="text-s">RYU</a><br />

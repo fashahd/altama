@@ -342,7 +342,7 @@ TEAMS
         display: none;
     }
 
-    .niche-box-team:hover .content-box {
+    .niche-box-team:active .content-box {
         height: auto;
         margin-top: -96px;
         transition: margin-top .3s;

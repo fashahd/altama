@@ -2587,6 +2587,10 @@ footer {
     margin-left: 0;
 }
 
+.footer-base a{
+    line-height: 22pt;
+}
+
 .footer-bg {
     height: 330px;
     padding: 15px 0;

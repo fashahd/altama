@@ -82,14 +82,37 @@
 
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var infoWindow = new google.maps.InfoWindow;
+        var infowincontent = document.createElement('div');
+        var strong = document.createElement('strong');
+        strong.textContent = "Altama Surya Anugrah"
+        infowincontent.appendChild(strong);
+        infowincontent.appendChild(document.createElement('br'));
+
+        var text = document.createElement('text');
+        text.textContent = "Jalan Bandengan Utara 85A No. 4, Penjaringan, RT.3/RW.16, Penjaringan, Kota Jkt Utara";
+        infowincontent.appendChild(text);
+        infowincontent.appendChild(document.createElement('br'));
+        
+        var strong1 = document.createElement('text');
+        strong1.textContent = "(021) 6680180"
+        infowincontent.appendChild(strong1);
+        infowincontent.appendChild(document.createElement('br'));
+        
+        var uluru = {lat: -6.1368109, lng: 106.794745};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 12,
           center: uluru
         });
+
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
+        });
+
+        marker.addListener('click', function() {
+            infoWindow.setContent(infowincontent);
+            infoWindow.open(map, marker);
         });
       }
     </script>

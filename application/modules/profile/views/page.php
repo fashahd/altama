@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-12 hc_title_tag_cnt"><h1 id="rBIkI">Company Overview</h1></div>
 							<div class="col-md-12 hc_separator_cnt"><hr class="default"/></div>
-							<p style="padding-left:15px;line-height:2.2">
+							<p style="padding-left:15px;line-height:2.5;text-align:justify">
 							Bapak Antoni Sutjiadi adalah sosok jenius yang ada dibalik kesuksesan PT. Altama Surya Arsa. Dengan ketekunan serta kejeliannya melihat peluang bisnis, mengantarkan PT. Altama Surya Arsa menjadi sebuah perusahaan terkemuka dan terdepan dalam menyediakan alat teknik bermutu dan terjamin kualitasnya. Bapak Antonius Sutjiadi mengawali bisnis di dunia teknik dengan mendirikan CV. Sumber Daya. Sebuah CV yang memiliki divisi-divisi penjualan seperti divisi teknik dan bangunan, divisi mainan, dan divisi spare parts. Divisi ini men-supply bahan atau produk yang diperlukan dalam proses suatu pabrik. Seiring perkembangannya yang melaju pesat, divisi tersebut akhirnya dipisahkan untuk berdiri sendiri sebagai perusahaan yang mandiri agar mampu mengakomodasi perkembangan aktivitas bisnisnya. Pada Januari 1997, para pemegang saham mendirikan PT. Altama Surya Anugerah yang berkonsentrasi pada penjualan produk – produk berkualitas tinggi dalam rangka memenuhi kepuasan pelanggan. PT Altama Surya Anugerah berkonsentrasi pada penjualan produk Handtools, Powertools, Lubricant, Epoxy, dan Welding Equipment  yang berkualitas tinggi.
 Oscar Andrew Sutjiadi adalah putra ke-3 dari Bapak Antonius Sutjiadi. Seperti pepatah mengatakan bahwa buah tak pernah jatuh jauh dari pohonnya. Talenta berbisnis seperti mendarah daging ke dalam diri beliau. Pada krisis moneter 1998, melalui tangan dinginnya, PT Altama Surya Anugerah yang baru berumur 1 tahun mampu tetap bertahan dan berdiri kokoh serta menciptakan inovasi dan strategi yang mumpuni sehingga menjadikan PT Altama Surya Anugerah menjadi perusahaan ternama di bidang teknik.
 PT. Atama Surya Anugerah yang merupakan bagian dari Sumber Daya Holding mengalami pertumbuhan sangat cepat, dengan diawali memiliki belasan karyawan kini telah memiliki ratusan karyawan yang bekerja secara professional. Konsistensi dan nilai-nilai yang tertanam di karyawan merupakan faktor penting menjadikan besarnya perusahaan. Sikap kekeluargaan dan rasa memiliki yang tertanam pada tiap diri karyawan, mewujudkan saling terintegrasi untuk melakukan perbaikan terus menerus demi visi perusahaan Yaitu: “Menjadi perusahaan marketing terdepan di Indonesia yang bersinergi dengan mitra kerja dalam mendistribusikan product hardware ternama dan berkualitas sesuai dengan kebutuhan pasar”
@@ -144,7 +144,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 										<div class="row">
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2014.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -155,7 +155,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2015.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -166,7 +166,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2016-Adjustable-Wrench.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -177,7 +177,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2016-Hand-Tools.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -188,7 +188,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2016-Pliers.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -199,7 +199,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2016-Screwdriver.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -210,7 +210,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2017-Hand-Tools.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -221,7 +221,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/2017-Kunci-Inggris.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -232,7 +232,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/Digital-Popular-Brand-Award-2016.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -243,7 +243,7 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/award/Digital-Popular-Brand-Award-2017.jpg">
 													</a>
 													<div class="caption-bottom">
@@ -278,36 +278,31 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
                                 <div class="col-md-12 hc_separator_cnt"><hr class="default"/></div>
 									<div class="text-center">
 										<div class="row">
-											<div class="col-md-4">
+											<!-- <div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/boc/antonius-s.jpg">
 													</a>
 													<div class="caption-bottom">
-														<h5><a href="#">Antonius S</a></h5>
-														<!-- <p>Category Hand Tools</p> -->
+														<h5><a href="#">ANTONIUS SUTJIADI</a></h5>
 													</div>
 												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
-														<img alt="" src="<?=base_url()?>appsources/boc/alexander-s.jpg">
+											</div> -->
+											<div class="col-md-4 ">
+												<div class="advs-box niche-box-team">
+													<a class="img-box">
+														<img class="anima" src="<?=base_url()?>appsources/boc/antonius-s.jpg" alt="" />
 													</a>
-													<div class="caption-bottom">
-														<h5><a href="#">Alexsander S</a></h5>
-														<!-- <p>Category Hand Tools</p> -->
-													</div>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
-														<img alt="" src="<?=base_url()?>appsources/boc/stephen-s.jpg">
-													</a>
-													<div class="caption-bottom">
-														<h5><a href="#">Stephen S</a></h5>
-														<!-- <p>Category Hand Tools</p> -->
+													<div class="content-box">
+														<h2>ANTONIUS SUTJIADI</h2>
+														<h4>Founder</h4>
+														<hr class="e" />
+														<div class="btn-group social-group">
+															<a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
+														</div>
+														<p>Nibh atque suspendisse netus veritatis eveniet pariaturo.</p>
 													</div>
 												</div>
 											</div>
@@ -336,29 +331,63 @@ Pengembangan dalam system manajemen memberikan bentuk nyata perbaikan internal u
                                 <h1 id="rBIkI">Board of Director</h1>
                                 <div class="col-md-12 hc_separator_cnt"><hr class="default"/></div>
 									<div class="text-center">
-										<div class="row">
-											<div class="col-md-4">
+										<div class="row">											
+											<div class="col-md-4 ">
+												<div class="advs-box niche-box-team">
+													<a class="img-box">
+														<img class="anima" src="<?=base_url()?>appsources/bod/Oscar-S.jpg" alt="" />
+													</a>
+													<div class="content-box">
+														<h2>OSCAR ANDREW SUTJIADI</h2>
+														<h4>Founder</h4>
+														<hr class="e" />
+														<div class="btn-group social-group">
+															<a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
+														</div>
+														<p>Nibh atque suspendisse netus veritatis eveniet pariaturo.</p>
+													</div>
+												</div>
+											</div>									
+											<div class="col-md-4 ">
+												<div class="advs-box niche-box-team">
+													<a class="img-box">
+														<img class="anima" src="<?=base_url()?>appsources/bod/Stephanus-S.jpg" alt="" />
+													</a>
+													<div class="content-box">
+														<h2>STEPHANUS SANTOSO</h2>
+														<h4>Founder</h4>
+														<hr class="e" />
+														<div class="btn-group social-group">
+															<a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+															<a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
+														</div>
+														<p>Nibh atque suspendisse netus veritatis eveniet pariaturo.</p>
+													</div>
+												</div>
+											</div>
+											<!-- <div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/bod/Oscar-S.jpg">
 													</a>
 													<div class="caption-bottom">
 														<h5><a href="#">Oscar S</a></h5>
-														<!-- <p>Category Hand Tools</p> -->
 													</div>
 												</div>
 											</div>
 											<div class="col-md-4">
 												<div class="img-box adv-img adv-img-down-text">
-													<a class="img-box img-scale-up i-center" href="#">
+													<a class="img-box i-center" href="#">
 														<img alt="" src="<?=base_url()?>appsources/bod/Stephanus-S.jpg">
 													</a>
 													<div class="caption-bottom">
 														<h5><a href="#">Stephanus S</a></h5>
-														<!-- <p>Category Hand Tools</p> -->
 													</div>
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
