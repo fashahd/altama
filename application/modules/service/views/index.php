@@ -1,11 +1,11 @@
 
-<div class="section-empty no-paddings row-25">
-    <div class="section-slider row-25 white">
+<div class="section-empty ">
+    <div class="section-slider white">
         <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
             <ul class="slides">
                 <li data-slider-anima="fade-left" data-time="1000">
                     <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/banner.jpeg')">
+                        <div class="bg-cover" style="background-image:url('<?=base_url()?>appsources/banner/service_center.jpg')">
                         </div>
                     </div>
                 </li>
