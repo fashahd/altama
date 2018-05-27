@@ -1,10 +1,10 @@
 <?php
     $sql    = "SELECT * FROM company_data";
     $query  = $this->db->query($sql);
-    $milestone = "";
+    $business_overview = "";
     if($query->num_rows()>0){
         $row = $query->row();
-        $milestone = $row->milestone_url;
+        $business_overview = $row->business_overview;
     }
     $sql    = "SELECT * FROM banner";
     $query  = $this->db->query($sql);
@@ -59,29 +59,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="box box-widget">
-                <div class="box-header with-border">
-                    <div class="user-block">
-                        <h4>Milestone</h4>
-                    </div>
-                </div>
                 <div class="box-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="main">
-                                <form id="uploadimage" method="post" enctype="multipart/form-data">
-                                    <div id="image_preview"><img id="previewing" src="<?=base_url()?><?=$milestone?>" /></div>
-                                    <hr id="line">
-                                    <div id="selectImage">
-                                        <label>Select Your Image</label><br/>
-                                        <input type="file" name="file" id="file" required />
-                                        <button type="submit" class="submit" />Update</button>
+                            <h2>Business Overview</h2>                        
+                            <form role="form" method="post" id="formbusiness">
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <textarea class="form-control textarea" name="business"><?=$business_overview?></textarea>
                                     </div>
-                                </form>
-                            </div>
+                                    <button type="submit" class="btn btn-primary">Save</submit>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

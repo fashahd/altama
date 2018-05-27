@@ -49,11 +49,11 @@
                         <div class="row">
                             <div class="col-md-6 text-s">
                                 <h3></h3>
-                                <a href="<?=base_url()?>contact" class="text-s">Company Overview & Milestone</a><br />
-                                <a href="<?=base_url()?>career" class="text-s">Vision, Missions & Company Value</a><br />
-                                <a href="<?=base_url()?>news" class="text-s">Award & Recognition</a><br />
-                                <a href="<?=base_url()?>service" class="text-s">Board of Commisioner</a><br />
-                                <a href="<?=base_url()?>service" class="text-s">Board of Director</a><br />
+                                <a href="<?=base_url()?>profile/page/company-overview-and-milestone" class="text-s">Company Overview & Milestone</a><br />
+                                <a href="<?=base_url()?>profile/page/vision-mission-and-company-value" class="text-s">Vision, Missions & Company Value</a><br />
+                                <a href="<?=base_url()?>profile/page/award-and-recognition" class="text-s">Award & Recognition</a><br />
+                                <a href="<?=base_url()?>profile/page/board-of-commisioner" class="text-s">Board of Commisioner</a><br />
+                                <a href="<?=base_url()?>profile/page/board-of-director" class="text-s">Board of Director</a><br />
 
                             </div>
                             <div class="col-md-3 text-s">
@@ -66,9 +66,9 @@
                             </div>
                             <div class="col-md-3 text-s">
                                 <h3></h3>
-                                <a href="#" class="text-s">Tekiro</a><br />
-                                <a href="#" class="text-s">RYU</a><br />
-                                <a href="#" class="text-s">REXCO</a><br />
+                                <a href="http://www.tekiro.com" target="_blank" class="text-s">Tekiro</a><br />
+                                <a href="http://www.ryupowertools.com" target="_blank" class="text-s">RYU</a><br />
+                                <a href="http://www.rexco-solution.com" target="_blank" class="text-s">REXCO</a><br />
                             </div>
                         </div>
                     </div>

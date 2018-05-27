@@ -1,5 +1,176 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+function deletebod(id){
+	if(confirm("Delete This BOD ?")){
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/profile/deletebod",
+			data : {id:id},
+			// dataType: "json",
+			success: function(data){
+				if(data =="sukses"){
+					window.location.reload();
+				}else{
+					alert("Connection Error");
+				}
+			},error: function(xhr, ajaxOptions, thrownError){            
+				alert(xhr.responseText);
+				// alert("Connection Error");
+				return;
+			}
+		});
+	}
+}
+
+function deleteboc(id){
+	if(confirm("Delete This BOC ?")){
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/profile/deleteboc",
+			data : {id:id},
+			// dataType: "json",
+			success: function(data){
+				if(data =="sukses"){
+					window.location.reload();
+				}else{
+					alert("Connection Error");
+				}
+			},error: function(xhr, ajaxOptions, thrownError){            
+				alert(xhr.responseText);
+				// alert("Connection Error");
+				return;
+			}
+		});
+	}
+}
+
+function deleteAward(id){
+	if(confirm("Delete This Award ?")){
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/profile/deleteAward",
+			data : {id:id},
+			// dataType: "json",
+			success: function(data){
+				if(data =="sukses"){
+					window.location.reload();
+				}else{
+					alert("Connection Error");
+				}
+			},error: function(xhr, ajaxOptions, thrownError){            
+				alert(xhr.responseText);
+				// alert("Connection Error");
+				return;
+			}
+		});
+	}
+}
+
+$("#addBOD").submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData($(this)[0]);
+	formData.append('bod_name', $("#bod_name").val());
+	formData.append('bod_category', $("#bod_category").val());
+	$("#btnaward").html('<span class="btn btn-primary">Please Wait .....</span>');
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/profile/addBOD",
+		data: formData,
+		async: false,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(data){
+			// alert(JSON.stringify(data));
+			if(data.status == 401){
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+ '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+ '<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+ data.error+'</div>');
+				$("#btnaward").html('<button type="submit" class="btn btn-primary">Save changes</button>');
+			}
+			if(data.status == 200){
+				alert('Successful Upload');
+				window.location.reload();
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+		alert(xhr.responseText);
+		}
+	});
+});
+
+$('#addAwards').submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData($(this)[0]);
+	formData.append('award_title', $("#award_title").val());
+	formData.append('award_category', $("#award_category").val());
+	$("#btnaward").html('<span class="btn btn-primary">Please Wait .....</span>');
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/profile/addAwards",
+		data: formData,
+		async: false,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(data){
+			// alert(JSON.stringify(data));
+			if(data.status == 401){
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+ '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+ '<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+ data.error+'</div>');
+				$("#btnaward").html('<button type="submit" class="btn btn-primary">Save changes</button>');
+			}
+			if(data.status == 200){
+				alert('Successful Upload');
+				window.location.reload();
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+		alert(xhr.responseText);
+		}
+	});
+});
+
+$('#addBOC').submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData($(this)[0]);
+	formData.append('boc_name', $("#boc_name").val());
+	formData.append('boc_category', $("#boc_category").val());
+	$("#btnaward").html('<span class="btn btn-primary">Please Wait .....</span>');
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/profile/addBOC",
+		data: formData,
+		async: false,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(data){
+			// alert(JSON.stringify(data));
+			if(data.status == 401){
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+ '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+ '<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+ data.error+'</div>');
+				$("#btnaward").html('<button type="submit" class="btn btn-primary">Save changes</button>');
+			}
+			if(data.status == 200){
+				alert('Successful Upload');
+				window.location.reload();
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+		}
+	});
+});
+
 $("#formvisimisi").submit(function(event) {
 	event.preventDefault();
 
@@ -34,6 +205,30 @@ $("#formcompany").submit(function(event) {
 	$.ajax({
 		type : 'POST',
 		url  : toUrl+"/appadmin/profile/updatecompany",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			alert(data);
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			// $("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			// +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			// +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			// +"Can't Connect, Please Try Again</div>");
+			// return;
+		}
+	});
+})
+$("#formbusiness").submit(function(event) {
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+    var form = $('#formbusiness');
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/dashboard/updatebusiness",
 		data : form.serialize(),
 		// dataType: "json",
 		success: function(data){

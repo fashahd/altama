@@ -1,10 +1,10 @@
 <?php
     $sql    = "SELECT * FROM company_data";
     $query  = $this->db->query($sql);
-    $milestone = "";
+    $business_overview = "";
     if($query->num_rows()>0){
         $row = $query->row();
-        $milestone = $row->milestone_url;
+        $business_overview = $row->business_overview;
     }
     $sql    = "SELECT * FROM banner";
     $query  = $this->db->query($sql);
@@ -38,7 +38,7 @@
                     <h4 class="title-front"><span class="underline">Bu</span>siness Overview</h4>
                 </div>
                 <div class="col-md-8">
-                    <p>PT. Altama Surya Anugerah memfokuskan untuk terjun di dunia alat - alat serta perkakas konstruksi seperti Handtools, Powertools dan Lubricant.</p>
+                    <p><?=$business_overview?></p>
                 </div>
             </div>
         </div>

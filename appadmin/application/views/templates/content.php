@@ -64,7 +64,7 @@
                         </li>
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-tags"></i> <span>Profile</span>
+                                <i class="fa fa-users"></i> <span>Profile</span>
                                 <span class="pull-right-container">
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </span>
@@ -77,10 +77,18 @@
                                 <li><a href="<?=base_url()?>profile/pages/board-of-director"><i class="fa fa-circle-o"></i> Board of Director</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="<?=base_url()?>dashboard/front">
-                                <i class="fa fa-dashboard"></i> <span>Brands</span>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-tags"></i> <span>Brands</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
                             </a>
+                            <ul class="treeview-menu">
+                                <li><a href="<?=base_url()?>brands/pages/power-tools"><i class="fa fa-circle-o"></i> Power Tools</a></li>
+                                <li><a href="<?=base_url()?>brands/pages/hand-tools"><i class="fa fa-circle-o"></i> Hand Tools</a></li>
+                                <li><a href="<?=base_url()?>brands/pages/lubricants"><i class="fa fa-circle-o"></i> Lubricants</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="<?=base_url()?>page/news">

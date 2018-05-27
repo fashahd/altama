@@ -334,28 +334,54 @@
             }
         }
 
-        function getListProduct($limit = 0, $start = 0){
+        function getListAward($limit = 0, $start = 0){
             $ret = "";
-            $sql    = " SELECT a.product_id, a.product_image1, a.product_name, a.product_category , 
-                        a.product_subcategory, b.menu_title, c.sub_name, a.product_status
-                        FROM `ryu_product` as a
-                        LEFT JOIN ryu_menu as b on b.menu_id = a.product_category
-                        LEFT JOIN ryu_subcategory as c on c.sub_id = a.product_subcategory
-                        ORDER BY a.product_dttm desc
+            $sql    = " SELECT * FROM awards as a
+                        ORDER BY a.id desc
                         LIMIT $start,$limit";
             $query  = $this->db->query($sql);
             if($query->num_rows()>0){
                 foreach($query->result() as $row){
-                    if($row->sub_name != ""){
-                        $subcategory = " > $row->sub_name";
-                    }else{
-                        $subcategory = "";
-                    }
                     $ret .= "<tr>
-                    <td><input type='checkbox' id='pro_$row->product_id' name='product_id' value='$row->product_id'/></td>
-                    <td><img width='70px' src='".base_url()."$row->product_image1'/></td><td>$row->product_name</td>
-                    <td>$row->menu_title $subcategory</td><td>$row->product_status</td>
-                    <td><a href='".base_url()."catalog/edit/product/$row->product_id' class='btn btn-default'><span class='fa fa-edit'></span></a></td>
+                    <td><img width='70px' src='".base_url()."$row->award_image'/>
+                    <td>$row->award_title</td><td>$row->award_category</td>
+                    <td><button onclick='deleteAward(\"$row->id\")' class='btn btn-danger'><span class='fa fa-trash'></span></button></td>
+                    </tr>";
+                }
+            }
+            return $ret;
+        }
+
+        function getListBOC($limit = 0, $start = 0){
+            $ret = "";
+            $sql    = " SELECT * FROM boc as a
+                        ORDER BY a.boc_id desc
+                        LIMIT $start,$limit";
+            $query  = $this->db->query($sql);
+            if($query->num_rows()>0){
+                foreach($query->result() as $row){
+                    $ret .= "<tr>
+                    <td><img width='70px' src='".base_url()."$row->boc_image'/>
+                    <td>$row->boc_name</td><td>$row->boc_category</td>
+                    <td><button onclick='deleteboc(\"$row->boc_id\")' class='btn btn-danger'><span class='fa fa-trash'></span></button></td>
+                    </tr>";
+                }
+            }
+            return $ret;
+        }
+
+        function getListBOD($limit = 0, $start = 0){
+            $ret = "";
+            $sql    = " SELECT * FROM bod as a
+                        ORDER BY a.bod_id desc
+                        LIMIT $start,$limit";
+            $query  = $this->db->query($sql);
+            if($query->num_rows()>0){
+                foreach($query->result() as $row){
+                    $ret .= "<tr>
+                    <td><img width='70px' src='".base_url()."$row->bod_image'/>
+                    <td>$row->bod_name</td><td>$row->bod_category</td>
+                    <td><button onclick='deletebod(\"$row->bod_id\")' class='btn btn-danger'><span class='fa fa-trash'></span></button></td>
                     </tr>";
                 }
             }

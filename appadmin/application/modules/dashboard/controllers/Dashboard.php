@@ -19,6 +19,21 @@ class Dashboard extends MX_Controller {
 		$this->layout->content('front',$data);
 	}
 
+	function updatebusiness(){
+		$business = $_POST["business"];
+		$data = array("business_overview"=>$business);
+		$this->db->where("id","0");
+		$query = $this->db->update("company_data",$data);
+		if($query){
+			echo "sukses";
+			return;
+		}else{
+			echo "gagal";
+			return;
+		}
+
+	}
+
 	function uploadmilestone(){
 		if(isset($_FILES["file"]["name"])){
 			$validextensions = array("jpeg", "jpg", "png");
