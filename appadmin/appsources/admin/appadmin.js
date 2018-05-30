@@ -394,6 +394,72 @@ function imageIsLoaded(e) {
 	$('#previewing').attr('height', '100%');
 };
 
+function deletejob(){
+	var sList = "";
+	$('input[name=job_id]:checked').each(function () {
+		sList += $(this).val() + "|";
+	});
+
+	if(sList == ""){
+		alert("Please select a Testi");
+		return;
+	}
+	if (confirm('Are you sure you?')) {
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/career/deletejob",
+			data : {service_id:sList},
+			// dataType: "json",
+			success: function(data){
+				alert(data);
+				window.location.reload();
+			},error: function(xhr, ajaxOptions, thrownError){            
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+"Can't Connect, Please Try Again</div>");
+				return;
+			}
+		});
+		// Save it!
+	} else {
+		// Do nothing!
+	}
+}
+
+function deletetesti(){
+	var sList = "";
+	$('input[name=testimoni_id]:checked').each(function () {
+		sList += $(this).val() + "|";
+	});
+
+	if(sList == ""){
+		alert("Please select a Testi");
+		return;
+	}
+	if (confirm('Are you sure you?')) {
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/career/deletetesti",
+			data : {service_id:sList},
+			// dataType: "json",
+			success: function(data){
+				alert(data);
+				window.location.reload();
+			},error: function(xhr, ajaxOptions, thrownError){            
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+"Can't Connect, Please Try Again</div>");
+				return;
+			}
+		});
+		// Save it!
+	} else {
+		// Do nothing!
+	}
+}
+
 function deleteservice(){
 	var sList = "";
 	$('input[name=service_id]:checked').each(function () {
@@ -1266,6 +1332,68 @@ $("#addDownload").submit(function(event){
 				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
 				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
 				+"Can't Connect, Please Try Again</div>");
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			// alert(xhr.responseText);
+			$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
+			return;
+		}
+	});
+})
+
+$("#addJob").submit(function(event){
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+	var form = $('#addJob');
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/career/addJob",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			if(data =="sukses"){
+				alert(data);
+				window.location.reload();
+				return;
+			}else{
+				alert("Add Testimoni was Failed");
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			// alert(xhr.responseText);
+			$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
+			return;
+		}
+	});
+})
+
+$("#addTesti").submit(function(event){
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+	var form = $('#addTesti');
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/career/addTesti",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			if(data =="sukses"){
+				alert(data);
+				window.location.reload();
+				return;
+			}else{
+				alert("Add Testimoni was Failed");
 				return;
 			}
 		},error: function(xhr, ajaxOptions, thrownError){            

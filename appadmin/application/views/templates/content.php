@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?=base_url()?>page/socialmedia">
+                            <a href="<?=base_url()?>career/page">
                                 <i class="fa fa-instagram"></i> <span>Career</span>
                             </a>
                         </li>

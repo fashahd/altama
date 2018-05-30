@@ -1,3 +1,45 @@
+<?php
+	$sql    = "SELECT * FROM testimoni order by testimoni_id  desc";
+	$query  = $this->db->query($sql);
+	$datatesti = "";
+	if($query->num_rows()>0){
+		foreach($query->result() as $row){
+			$datatesti .= ' 
+			<div class="col-md-6" style="margin-bottom:60px">
+				<div class="col-md-12">
+					<div class="title-base text-left">
+						<p>'.$row->position.'</p>
+						<h2>'.$row->fullname.'</h2>
+					</div>
+					<p style="text-align:justify">
+					<!-- <img src="<?php echo base_url()?>appsources/images/avatar.png" width="50"height="50"style="float:left" /> Teks postingan  -->
+					<img width="220"height="220" style="float:left; margin-right:15px" src="'.base_url().'appsources/images/avatar.png" alt="" />
+					'.$row->testimoni.'
+
+					</p>
+				</div>
+			</div>
+			';
+		}
+	}
+	$sql    = "SELECT * FROM job order by job_id  desc";
+	$query  = $this->db->query($sql);
+	$dataJob = "";
+	if($query->num_rows()>0){
+		foreach($query->result() as $row){
+			$dataJob .= ' 
+			<div class="list-group-item career">
+				<a href="#">'.$row->job_position.'</a>
+				<div class="panel">
+					<div class="inner">
+						'.$row->job_requirement.'
+					</div>
+				</div>
+			</div>
+			';
+		}
+	}
+?>
     <div class="section-empty no-paddings row-25">
         <div class="section-slider row-25 white">
             <div class="flexslider advanced-slider slider visible-dir-nav" data-options="animation:fade">
@@ -39,74 +81,7 @@
     <div class="section-empty section-item  no-paddings">
 		<div class="container content">
 			<div class="row">
-				<div class="col-md-6" style="margin-bottom:60px">
-					<div class="col-md-5">
-						<img src="<?php echo base_url()?>appsources/images/avatar.png" alt="" />
-					</div>
-					<div class="col-md-7">
-						<div class="title-base text-left">
-							<p>Creative Team</p>
-							<h2>Jono</h2>
-						</div>
-						<p>
-							Donec sollicitudin molestie malesuada. 
-							Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
-							Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6" style="margin-bottom:60px">
-					<div class="col-md-5">
-						<img src="<?php echo base_url()?>appsources/images/avatar.png" alt="" />
-					</div>
-					<div class="col-md-7">
-						<div class="title-base text-left">
-							<p>Creative Team</p>
-							<h2>Jono</h2>
-						</div>
-						<p>
-							Donec sollicitudin molestie malesuada. 
-							Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
-							Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6" style="margin-bottom:60px">
-					<div class="col-md-5">
-						<img src="<?php echo base_url()?>appsources/images/avatar.png" alt="" />
-					</div>
-					<div class="col-md-7">
-						<div class="title-base text-left">
-							<p>Creative Team</p>
-							<h2>Jono</h2>
-						</div>
-						<p>
-							Donec sollicitudin molestie malesuada. 
-							Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
-							Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6" style="margin-bottom:60px">
-					<div class="col-md-5">
-						<img src="<?php echo base_url()?>appsources/images/avatar.png" alt="" />
-					</div>
-					<div class="col-md-7">
-						<div class="title-base text-left">
-							<p>Creative Team</p>
-							<h2>Jono</h2>
-						</div>
-						<p>
-							Donec sollicitudin molestie malesuada. 
-							Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
-							Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.
-						</p>
-					</div>
-				</div>
+				<?=$datatesti?>
 			</div>
 		</div>
     </div>
@@ -115,30 +90,7 @@
             <div class="row ">
                 <div class="col-md-8">
                     <div class="list-group accordion-list">
-						<div class="list-group-item career">
-							<a href="#"> Accordion item 1</a>
-							<div class="panel">
-								<div class="inner">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="list-group-item career">
-							<a href="#"> Accordion item 1</a>
-							<div class="panel">
-								<div class="inner">
-									...
-								</div>
-							</div>
-						</div>
-						<div class="list-group-item career">
-							<a href="#"> Accordion item 1</a>
-							<div class="panel">
-								<div class="inner">
-									...
-								</div>
-							</div>
-						</div>
+						<?=$dataJob?>
 					</div>
                 </div>
                 <div class="col-md-4">
