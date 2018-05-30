@@ -91,12 +91,12 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="<?=base_url()?>page/news">
+                            <a href="<?=base_url()?>media/front">
                                 <i class="fa fa-calendar"></i> <span>News & Events</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?=base_url()?>service/page">
                                 <i class="fa fa-wrench"></i> <span>Service Center</span>
                             </a>
                         </li>

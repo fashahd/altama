@@ -124,6 +124,40 @@
             }
         }
 
+        function addBanner($image1,$type){
+            $this->db->trans_begin();
+
+            $sql    = "SELECT * FROM banner where type = '$type'";
+            $query  = $this->db->query($sql);
+            if($query->num_rows()>0){
+                $row = $query->row();
+                unlink($row->image_url);
+                $data   = array(
+                    "image_url"     => $image1
+                );
+                $this->db->where("id",$row->id);        
+                $query  = $this->db->update("banner", $data);
+            }else{
+                $data   = array(
+                    "image_url"     => $image1,
+                    "created_dttm"  => date("Y-m-d H:i:s"),
+                    "type" => $type
+                );            
+                $query  = $this->db->insert("banner", $data);
+            }
+
+            if ($this->db->trans_status() === FALSE)
+            {
+                $this->db->trans_rollback();
+                return "gagal";
+            }
+            else
+            {
+                $this->db->trans_commit();
+                return "sukses";
+            }
+        }
+
         function addMilestone($image1){
             $this->db->trans_begin();
 
@@ -155,11 +189,35 @@
             }
         }
 
+        function addevent($image1,$description = null,$category=null,$title=null){
+            $this->db->trans_begin();
+            $data   = array(
+                "event_image"     => $image1,
+                "created_dttm"  => date("Y-m-d H:i:s"),
+                "event_description" => $description,
+                "event_category" => $category,
+                "event_title"=>$title
+            );            
+            $query  = $this->db->insert("events", $data);
+
+            if ($this->db->trans_status() === FALSE)
+            {
+                $this->db->trans_rollback();
+                return "gagal";
+            }
+            else
+            {
+                $this->db->trans_commit();
+                return "sukses";
+            }
+        }  
+
         function addslider($image1){
             $this->db->trans_begin();
             $data   = array(
                 "image_url"     => $image1,
                 "created_dttm"  => date("Y-m-d H:i:s"),
+                "type" => "home"
             );            
             $query  = $this->db->insert("banner", $data);
 

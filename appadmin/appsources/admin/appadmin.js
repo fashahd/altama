@@ -244,6 +244,30 @@ $("#formbusiness").submit(function(event) {
 	});
 })
 
+function deleteeventimage(image_id){
+	if (confirm('Are you sure you?')) {
+		$.ajax({
+			type : 'POST',
+			url  : toUrl+"/appadmin/media/deleteeventimage",
+			data : {image_id:image_id},
+			// dataType: "json",
+			success: function(data){
+				alert(data);
+				window.location.reload();
+			},error: function(xhr, ajaxOptions, thrownError){            
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+				+"Can't Connect, Please Try Again</div>");
+				return;
+			}
+		});
+		// Save it!
+	} else {
+		// Do nothing!
+	}
+}
+
 function deleteslider(image_id){
 	if (confirm('Are you sure you?')) {
 		$.ajax({
@@ -267,6 +291,50 @@ function deleteslider(image_id){
 		// Do nothing!
 	}
 }
+
+$('#uploadbanner').submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData(this);
+	formData.append('category', $("#category").val());
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/brands/uploadbanner",
+		data: formData,
+		xhr: function() {
+			var myXhr = $.ajaxSettings.xhr();
+			if(myXhr.upload){
+				myXhr.upload.addEventListener('progress',progress, false);
+			}
+			return myXhr;
+        },
+		cache: false,
+        contentType: false,
+        processData: false,
+		dataType: "json",
+		success: function(data){
+			if(data.status == "sukses"){
+				alert("Upload Success");
+				window.location.reload();
+				return;
+			}
+			if(data.status == "max_upload"){
+				alert(data.message);
+				return;
+			}
+			if(data.status == "gagal"){
+				alert(data.message);
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			$("#message").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
+		}
+	});
+})
 
 $('#uploadimage').submit(function(event) {
 	event.preventDefault();
@@ -361,7 +429,7 @@ function deleteservice(){
 
 function deleteevent(){
 	var sList = "";
-	$('input[name=event_id]:checked').each(function () {
+	$('input[name=news_id]:checked').each(function () {
 		sList += $(this).val() + "|";
 	});
 
@@ -372,8 +440,8 @@ function deleteevent(){
 	if (confirm('Are you sure you?')) {
 		$.ajax({
 			type : 'POST',
-			url  : toUrl+"/appadmin/page/deleteevent",
-			data : {event_id:sList},
+			url  : toUrl+"/appadmin/media/deleteevent",
+			data : {news_id:sList},
 			// dataType: "json",
 			success: function(data){
 				alert(data);
@@ -523,6 +591,30 @@ $("#category").change(function(){
 		}
 	});
 });
+
+
+$("#formdescription").submit(function(event) {
+	event.preventDefault();
+	
+    var form = $('#formdescription');
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/brands/addDescription",
+		data : form.serialize(),
+		// dataType: "json",
+		success: function(data){
+			alert(data);
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			// $("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			// +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			// +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			// +"Can't Connect, Please Try Again</div>");
+			// return;
+		}
+	});
+})
 
 $("#account").submit(function(event) {
 	event.preventDefault();
@@ -735,7 +827,42 @@ $("#updatesubcategories").submit(function(event){
 	});
 })
 
-$("#addEvent").submit(function(event){
+$("#updateNews").submit(function(event){
+	event.preventDefault();
+
+    // alert("test");
+    // return;
+	var formData = new FormData(this);
+	formData.append('news_id', $("#news_id").val());
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/media/updateNews",
+		data: formData,
+		cache: false,
+        contentType: false,
+        processData: false,
+		dataType: "json",
+		success: function(data){
+			if(data.status =="sukses"){
+				alert(data.message);
+				window.location.reload();
+				return;
+			}else{
+				alert(data.message);
+				return;
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			// alert(xhr.responseText);
+			$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
+			return;
+		}
+	});
+})
+
+$("#addNews").submit(function(event){
 	event.preventDefault();
 
     // alert("test");
@@ -743,23 +870,19 @@ $("#addEvent").submit(function(event){
 	var formData = new FormData(this);
 	$.ajax({
 		type : 'POST',
-		url  : toUrl+"/appadmin/page/addEvent",
+		url  : toUrl+"/appadmin/media/addNews",
 		data: formData,
 		cache: false,
         contentType: false,
         processData: false,
-		// dataType: "json",
+		dataType: "json",
 		success: function(data){
-			if(data =="sukses"){
-				alert(data);
-				window.location.href=toUrl+"/appadmin/page/news";
+			if(data.status =="sukses"){
+				alert(data.message);
+				window.location.href=toUrl+"/appadmin/media/front/news";
 				return;
 			}else{
-				alert(data);
-				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
-				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
-				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
-				+"Can't Connect, Please Try Again</div>");
+				alert(data.message);
 				return;
 			}
 		},error: function(xhr, ajaxOptions, thrownError){            
@@ -849,6 +972,51 @@ $("#FileUpload3").on("change", function(){
 		alert("Upload an image");
 	}
 });
+
+$('#addevent').submit(function(event) {
+	event.preventDefault();
+	var formData = new FormData(this);
+	formData.append('description', $("#description").val());
+	formData.append('category', $("#category").val());
+	formData.append('title', $("#title").val());
+
+	$.ajax({
+		type : 'POST',
+		url  : toUrl+"/appadmin/media/addevent",
+		data: formData,
+		xhr: function() {
+			var myXhr = $.ajaxSettings.xhr();
+			if(myXhr.upload){
+				myXhr.upload.addEventListener('progress',progress, false);
+			}
+			return myXhr;
+        },
+		cache: false,
+        contentType: false,
+        processData: false,
+		dataType: "json",
+		success: function(data){
+			if(data.status =="sukses"){
+				alert(data.message);
+				window.location.reload();
+			}else if(data.status =="max_upload"){
+				$("#notif").html('<div class="alert alert-warning alert-dismissible">'
+                +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+                +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'+data.message);
+			}else {
+				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+                +'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+                +'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'+data.message);
+			}
+		},error: function(xhr, ajaxOptions, thrownError){            
+			alert(xhr.responseText);
+			$("#notif").html('<div class="alert alert-danger alert-dismissible">'
+			+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
+			+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
+			+"Can't Connect, Please Try Again</div>");
+		}
+	});
+})
 
 $('#addslider').submit(function(event) {
 	event.preventDefault();
@@ -1119,19 +1287,16 @@ $("#addService").submit(function(event){
 	var form = $('#addService');
 	$.ajax({
 		type : 'POST',
-		url  : toUrl+"/appadmin/page/addService",
+		url  : toUrl+"/appadmin/service/addService",
 		data : form.serialize(),
 		// dataType: "json",
 		success: function(data){
 			if(data =="sukses"){
 				alert(data);
-				window.location.href=toUrl+"/appadmin/page/service";
+				window.location.reload();
 				return;
 			}else{
-				$("#notif").html('<div class="alert alert-danger alert-dismissible">'
-				+'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'
-				+'<h4><i class="icon fa fa-ban"></i> Alert!</h4>'
-				+"Can't Connect, Please Try Again</div>");
+				alert("Add Service was Failed");
 				return;
 			}
 		},error: function(xhr, ajaxOptions, thrownError){            

@@ -1,27 +1,26 @@
 <?php 
+	$sql    = "SELECT * FROM banner where type='$module_id'";
+	$query  = $this->db->query($sql);
+	$image_url = "";
+	if($query->num_rows()>0){
+		$row = $query->row();
+		$image_url = $row->image_url;
+	}
+	$sql    = "SELECT * FROM description where type='$module_id'";
+	$query  = $this->db->query($sql);
+	$description = "";
+	if($query->num_rows()>0){
+		$row = $query->row();
+		$description = $row->description;
+	}
 	$keterangan = "";
-	if($module_id == "powertools"){
-		$keterangan = '
-			Sekilas Tentang RYU<br>
-			Selama lebih dari 10 tahun RYU Powertools telah hadir dan melengkapi kebutuhan pasar untuk alat-alat mesin teknik serta aksesoris di Indonesia. untuk para profesional yang mengutamakan produktifitas dan efisiensi. Selaras dengan komitmen tersebut, RYU Powertools memberikan jaminan garansi servis seumur hidup dengan Service Center dan Service Dealer resmi yang tersebar di beberapa kota besar di Indonesia. RYU Powertools memiliki varian produk yang lengkap dengan kategori: Powertools, Accessories, Engine serta Welding untuk keperluan pekerjaan di Metal Working, Wood Working, maupun pekerjaan umum lainnya untuk para pengguna di segmen pertukangan, perbengkelan, industri kecil hingga rumah tangga. 
-		';
-		$imagelogo = base_url()."appsources/banner/ryu.jpg";
+	if($module_id == "power-tools"){
 		$title = "Powertools";
 	}
 	if($module_id == "hand-tools"){
-		$keterangan = '
-			Sekilas Tentang Tekiro<br>
-			Dengan pengalaman lebih dari 18 tahun, Tekiro terus berinovasi dan telah berhasil menjadi salah satu merek perkakas presisi yang terpercaya, dengan varian produk lengkap, harga terjangkau dan jaringan distribusi yang luas di seluruh Indonesia. Kepercayaan pelanggan menjadi prioritas Tekiro, selaras dengan slogan Believe In Your Choice, Tekiro ingin para pengguna percaya akan produk pilihannya yang bisa menjadi andalan dan memberikan kenyamanan untuk pemakaian sehari-hari. Hingga saat ini Tekiro memiliki lebih dari 2000 produk dari 14 kategori, mulai dari wrench, socket, obeng, tang, dan insulation guna memenuhi kebutuhan dari berbagai segmen mulai dari industri, otomotif, bangunan hingga rumah tangga. Produk-produk tekiro sudah memenuhi standard internasional seperi JIS, ANSI, dan DIN.
-		';
-		$imagelogo = base_url()."appsources/banner/tekiro.jpg";
 		$title = "Hand Tools";
 	}
 	if($module_id == "lubricants"){
-		$keterangan = '
-			Sekilas Tentang Rexco<br>
-			Kami mempunyai pengalaman lebih dari 30 tahun dalam memasarkan produk- produk Chemical. Selama 30 tahun kami sangat mengetahui kebutuhan pasar akan produk-produk chemical dengan kualitas, harga dan varian produk yang lengkap. Oleh karena itu di tahun 2013, kami mulai mengembangkan produk chemical untuk memenuhi kebutuhan pasar akan produk-produk MRO (Maintenance, Repair & Overhaul). REXCO 50 sudah mendapatkan award dari tabloid OTOMOTIF sebagai Produk Yang Terpercaya. Di tahun 2016 kami mengeluarkan varian baru yaitu REXCO 81, REXCO 70 & REXCO 20. Dalam waktu 4 tahun, kami sudah memasarkan hampir di seluruh Indonesia. Dan sudah banyak industri & otomotif yang menggunakan produk Rexco, seperti Indofood, Nestle, Pertamina, PLN, Jhonlin, Indopoly, Astra Otoparts, Jaguar, Land Rover, Mercedes, Hyundai  dan masih banyak lagi.
-		';
-		$imagelogo = base_url()."appsources/banner/rexco.jpg";
 		$title = "Lubricants";
 	}
 ?>
@@ -31,7 +30,7 @@
             <ul class="slides">
                 <li data-slider-anima="fade-left" data-time="1000">
                     <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('<?=$imagelogo?>')">
+                        <div class="bg-cover" style="background-image:url('<?=base_url()."appadmin/".$image_url?>')">
                         </div>
                     </div>
                 </li>
@@ -48,9 +47,9 @@
 						<div class="col-md-12 hc_title_tag_cnt">
 							<h1 id="rBIkI"><?=$title?></h1></div>
 							<div class="col-md-12 hc_separator_cnt"><hr class="default"/></div>
-							<p style="padding-left:15px;line-height:2.2">
-								<?=$keterangan?>
-							</p>
+							<div style="padding-left:15px;line-height:2.2">
+								<?=$description?>
+							</div>
 						</div>
 					</div>
 				</div>

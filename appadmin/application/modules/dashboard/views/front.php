@@ -6,7 +6,7 @@
         $row = $query->row();
         $business_overview = $row->business_overview;
     }
-    $sql    = "SELECT * FROM banner";
+    $sql    = "SELECT * FROM banner where type='home'";
     $query  = $this->db->query($sql);
     $dataimage = "";
     if($query->num_rows()>0){
