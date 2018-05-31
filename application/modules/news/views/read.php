@@ -67,12 +67,12 @@
 												<p class="bd-month"><?=date("m Y", strtotime($news_created_date))?></p>
 											</div>
 										</div>
-										<a class="img-box" href="http://themes.framework-y.com/yellowbusiness/blog-post-3/">
+										<a class="img-box" href="#">
 											<img alt="" src="<?=base_url()?>appadmin/<?=$news_image?>" />
 										</a>
 										<div class="advs-box-content">
 											<h3>
-												<a href="http://themes.framework-y.com/yellowbusiness/blog-post-3/" class="text-l">
+												<a href="#" class="text-l">
 													<?=$news_title?>
 												</a>
 											</h3>

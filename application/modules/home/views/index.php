@@ -42,12 +42,12 @@
         $retlatest = '              
             <div class="col-lg-6">
                 <hr class="space visible-sm" />
-                <a class="img-box" href="#">
+                <a class="img-box" href="'.base_url().'news/read/'.$news_id_lates.'">
                     <img src="'.base_url().'appadmin/'.$news_image.'" alt="">
                 </a>
                 <h4 class="text-normal">'.$news_tittle_indo_lates.'</h4>
                 <h6>'.date("d M Y", strtotime($news_created_date)).'</h6>
-                <h3 class="title-read">Read More ....</h3>
+                <h3 class="title-read"><a href="'.base_url().'news/read/'.$news_id_lates.'">Read More ....</a></h3>
             </div>
         ';
     }
@@ -57,7 +57,7 @@
             if($news_idx != $news_id_lates){
                 $retnews .= '
                 <div class="col-lg-12">
-                    <h4 class="text-normal">'.$news_tittle_indo_latesx.'</h4>
+                    <h4 class="text-normal"><a href="'.base_url().'news/read/'.$news_idx.'">'.$news_tittle_indo_latesx.'</a></h4>
                     <h6>'.date("d M Y", strtotime($news_created_datex)).'</h6>
                     <hr>
                 </div>
@@ -90,17 +90,17 @@
             <div class="section-empty section-item text-center" style="width:100%; padding:30px; 100px; 30px;100px">
                 <div class="text-center">
                     <div class="col-md-4">
-                        <a class="img-box" href="#">
+                        <a class="img-box" href="http://tekiro.com" target="_blank">
                             <img style="width:300px" src="<?=base_url()?>appsources/repo/tekiro.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="img-box" href="#">
+                        <a class="img-box" href="http://ryupowertools.com" target="_blank">
                             <img style="width:300px" src="<?=base_url()?>appsources/repo/ryu.png" alt="">
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a class="img-box" href="#">
+                        <a class="img-box"href="http://rexco-solution.com" target="_blank">
                             <img style="width:300px" src="<?=base_url()?>appsources/repo/rexco.png" alt="">
                         </a>
                     </div>

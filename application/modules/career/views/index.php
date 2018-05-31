@@ -94,33 +94,35 @@
 					</div>
                 </div>
                 <div class="col-md-4">
-                    <div class="form-group">
-						<label>Name *</label>
-						<input class="form-control" />
-					</div>
-                    <div class="form-group">
-						<label>Phone</label>
-						<input class="form-control" />
-					</div>
-                    <div class="form-group">
-						<label>Email</label>
-						<input class="form-control" />
-					</div>
-                    <div class="form-group">
-						<label>Position</label>
-						<input class="form-control" />
-					</div>
-                    <div class="form-group">
-						<label>Attach Your CV</label>
-						<input type="file"/>
-					</div>
-                    <div class="form-group">
-						<label>Your Message</label>
-						<textarea class="form-control"></textarea>
-					</div>
-					<div class="form-group">
-						<button class="btn btn-indigo">Send</button>
-					</div>
+					<form id="formJob" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<label>Name *</label>
+							<input required class="form-control" name="name" id="name"/>
+						</div>
+						<div class="form-group">
+							<label>Phone</label>
+							<input required class="form-control" name="phone" id="phone" />
+						</div>
+						<div class="form-group">
+							<label>Email</label>
+							<input required class="form-control" name="email" id="email" />
+						</div>
+						<div class="form-group">
+							<label>Position</label>
+							<input class="form-control" name="position" id="position" />
+						</div>
+						<div class="form-group">
+							<label>Attach Your CV</label>
+							<input required type="file" name="attach_file" id="attach_file"/>
+						</div>
+						<div class="form-group">
+							<label>Your Message</label>
+							<textarea class="form-control" name="message" id="message"></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-indigo">Send</button>
+						</div>
+					</form>
                 </div>
 			</div>
         </div>

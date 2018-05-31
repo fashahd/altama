@@ -43,7 +43,7 @@
 						<h5><b>PT. Altama Surya Anugerah</b></h5>
                         <p class="text-s">Jl. Bandengan Utara<br> No.85A, RT.3/RW.16,<br> Penjaringan, North Jakarta City<br> Jakarta 14440 Indonesia</p>
                         <p class="text-s">Telp :  (021) 6680180</p>
-						<p><a>Open in Google Maps</a></p>
+						<p><a href="https://www.google.com/maps/dir/''/Altama+Surya+Anugerah/data=!4m5!4m4!1m0!1m2!1m1!1s0x2e69f61ffe9e8d9d:0x8ce2c558b8233ade?sa=X&ved=0ahUKEwi11OTuoa_bAhXQe30KHeqVAb0Q9RcIwQEwEA" target="_blank">Open in Google Maps</a></p>
                     </div>
                     <div class="col-md-6 footer-left text-left">
                         <div class="row">
