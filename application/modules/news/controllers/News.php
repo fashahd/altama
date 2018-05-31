@@ -90,7 +90,7 @@ class News extends MX_Controller {
 										<p>
 										'.substr(str_replace("<div>","",$row->news_content_indo), 0, 500).$titik.'
 										</p>
-										<a class="btn-text" href="#">Read more</a>
+										<a class="btn" href="'.base_url().'news/read/'.$row->news_id.'">Read more</a>
 									</div>
 								</div>
 							</div>
@@ -172,5 +172,12 @@ class News extends MX_Controller {
 		$data["module"] 	= $this->ModelGeneral->getPageTitle("news/index/news");
 		$data["type"]=$type;
 		$this->layout->content("index",$data);
+	}
+
+	function read($id = null){
+		$data["news_id"] = $id;
+		$data["module"] 	= $this->ModelGeneral->getPageTitle("news/index/news");
+		$this->layout->content("read",$data);
+
 	}
 }
